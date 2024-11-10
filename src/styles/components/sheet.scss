@@ -1,0 +1,70 @@
+﻿@use "../variables/variables" as *;
+
+@keyframes onOpen {
+    0% { right: -350px; }
+    100% { right: 0; }
+}
+
+@keyframes onOpenOverlay {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.sheet {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 1rem;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 350px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--body-bg);
+  border-radius: 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: right 0.4s cubic-bezier(0.25,0.1,0.25,1);
+  animation: onOpen 0.4s cubic-bezier(0.25,0.1,0.25,1);
+  z-index: 10;
+  
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin: -1rem;
+    padding: 1rem;
+    background-color: var(--surface-bg);
+    border-bottom: 1px solid var(--border-color);
+    border-radius: 0;
+  }
+  
+  // styles when the sheet is closing
+  &-container.closing {
+    .sheet {
+      right: -350px;
+    }
+    
+    .sheet-overlay {
+      opacity: 0;
+    }
+  }
+  
+  // Overlay
+  &-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    transition: opacity 0.4s cubic-bezier(0.25,0.1,0.25,1);
+    animation: onOpenOverlay 0.4s cubic-bezier(0.25,0.1,0.25,1);
+  }
+}
+
+// Prevent horizontal overflow when the sheet animation is active
+body.sheet-animation {
+  overflow-x: hidden;
+}
