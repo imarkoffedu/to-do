@@ -1,0 +1,13 @@
+﻿@use "components/button" as *;
+@use "components/input" as *;
+
+@use "variables/variables" as *;
+@import "variables/colors.css";
+
+body {
+  font-family: $font-family;
+  margin: 0;
+  padding: 0;
+  background-color: var(--body-bg);
+  color: var(--fg);
+}

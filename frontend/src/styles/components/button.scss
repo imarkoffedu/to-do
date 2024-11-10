@@ -1,0 +1,35 @@
+﻿@use "../variables/variables" as *;
+
+button, .btn {
+  background-color: var(--button-bg);
+  border: 1px solid var(--border-color);
+  color: var(--fg);
+  font-size: $font-sm;
+  padding: 0.5rem 0.75rem;
+  font-weight: 500;
+  display: inline-flex;
+  border-radius: $rounded-md;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+  
+  &:hover {
+      background-color: var(--button-bg-hover);
+  }
+  
+  &:active {
+      border-color: var(--primary);
+      background-color: rgba(var(--primary-rgb), 0.15);
+  }
+  
+  &.primary {
+      background-color: var(--primary);
+      color: var(--fg);
+  }
+  
+  .icon {
+    margin-right: 0.4rem;
+    margin-left: -0.25rem;
+    width: $font-md;
+    height: $font-md;
+  }
+}

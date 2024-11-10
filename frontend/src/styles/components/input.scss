@@ -1,0 +1,32 @@
+﻿@use "../variables/variables" as *;
+
+input, .input-group {
+  padding: 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: $rounded-md;
+    font-size: $font-sm;
+    color: var(--fg);
+    background-color: var(--input-bg);
+    transition: border-color 0.2s;
+  
+  &::placeholder {
+    color: var(--fg-muted);
+  }
+}
+
+.input-group {
+  display: inline-flex;
+  gap: 0.4rem;
+  
+  .icon {
+    width: $font-md;
+    height: $font-md;
+    color: var(--fg-muted);
+  }
+  
+  input {
+    margin: -0.5rem;
+    border: none;
+    background-color: transparent;
+  }
+}

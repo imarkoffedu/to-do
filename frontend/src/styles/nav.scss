@@ -1,0 +1,42 @@
+﻿@use "variables/variables" as *;
+
+header {
+  margin: 1rem;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--surface-bg);
+  border: 1px solid var(--border-color);
+  border-radius: $rounded-lg;
+  
+  @media (max-width: 768px) {
+    margin: 0.75rem;
+  }
+  
+  .logo {
+    font-size: $font-lg;
+    font-weight: 700;
+    color: var(--fg);
+    margin: 0;
+  }
+
+  nav {
+    display: flex;
+    gap: 1rem;
+
+    a {
+      color: var(--fg);
+      font-size: $font-sm;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+
+      &:hover {
+        color: var(--accent);
+      }
+    }
+  }
+}

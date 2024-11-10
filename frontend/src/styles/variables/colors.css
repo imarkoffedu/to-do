@@ -1,0 +1,41 @@
+﻿/* colors for light and dark themes */
+
+:root {
+    --primary: #007bff;
+    --primary-rgb: 0, 123, 255;
+    --secondary: #6c757d;
+    --secondary-rgb: 108, 117, 125;
+    
+    /* text color */
+    --fg: #212529;
+    --fg-muted: #6c757d;
+    
+    /* body color */
+    --body-bg: #f8f9fa;
+    --body-color: var(--fg);
+    
+    /* surface color */
+    --surface-bg: #ffffff;
+    --surface-color: var(--fg);
+    
+    --button-bg: rgba(0, 0, 0, 0.05);
+    --button-bg-hover: rgba(0, 0, 0, 0.1);
+    --input-bg: rgba(0, 0, 0, 0.05);
+    
+    /* border color */
+    --border-color: rgba(0, 0, 0, 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --fg: #f8f9fa;
+        
+        --body-bg: #212529;
+        --surface-bg: #2c2f37;
+        
+        --button-bg: rgba(255, 255, 255, 0.1);
+        --button-bg-hover: rgba(255, 255, 255, 0.2);
+        
+        --border-color: rgba(255, 255, 255, 0.07);
+    }
+}
