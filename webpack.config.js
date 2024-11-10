@@ -1,33 +1,30 @@
 ﻿const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ESLintPlugin = require('eslint-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-    entry: './src/index.ts', // Вхідний файл TypeScript
+    entry: './src/index.ts',
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist'),
-        clean: true, // Очищає dist перед новою збіркою
+        clean: true,
     },
     resolve: {
-        extensions: ['.ts', '.js', '.scss'], // Підтримка розширень файлів
+        extensions: ['.ts', '.js', '.scss'],
     },
     module: {
         rules: [
-            // TypeScript loader
             {
                 test: /\.ts$/,
                 use: 'ts-loader',
                 exclude: /node_modules/,
             },
-            // Sass loader
             {
                 test: /\.scss$/,
                 use: [
-                    'style-loader',    // Вставка стилів у DOM
-                    'css-loader',      // Завантаження CSS
-                    'sass-loader',     // Завантаження Sass
+                    'style-loader',
+                    'css-loader',
+                    'sass-loader',
                 ],
             },
             {
@@ -38,12 +35,9 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './src/index.html', // Шаблон для HTML
+            template: './src/index.html',
         }),
-        new ESLintPlugin({
-            extensions: ['js', 'ts', 'scss'], // Підтримка для js, ts і scss
-        }),
-        new CleanWebpackPlugin(), // Очищення dist перед збіркою
+        new CleanWebpackPlugin(),
     ],
     devServer: {
         static: path.join(__dirname, 'dist'),
