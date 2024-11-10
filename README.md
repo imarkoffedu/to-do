@@ -1,22 +1,24 @@
-﻿# To-do Application
+﻿# Front-End part of the project
 
-This is a simple to-do application that allows users to add, edit, and delete tasks. 
-The application is built using JavaScript, Node.js.
+Uses JavaScript/TS without any frameworks.
+Build with Webpack.
 
-## Installation
+## Scripts
 
-```bash
-npm install
-```
+- `npm install` - install dependencies.
+- `npm run start` - start development server.
+- `npm run build` - build project.
 
-## Usage
+## Project structure
 
-- `npm run start` - starts backend and frontend servers.
-- `npm run server` - run backend server.
-- `npm run client` - run frontend server in development mode. 
-- `npm run build` - build frontend for production.
-
-## Project Structure
-
-- `client` - frontend application.
-- `server` - backend application.
+- `src` - source code.
+  - `components` - reusable components.
+    - `layout` - layout components.
+    - `icons` - icon components.
+    - `ui` - UI components.
+  - `services` - services for working with the backend.
+  - `styles` - styles.
+    - `components` - styles for components.
+    - `variables` - variables for styles (colors, fonts, etc.).
+  - `utils` - utility functions.
+- `dist` - build output.
