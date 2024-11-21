@@ -4,7 +4,7 @@
     description?: string;
     doneAt?: Date;
     priority?: Priority;
-    category?: Category;
+    category?: Category[];
     created_at: Date;
     updated_at?: Date;
 }

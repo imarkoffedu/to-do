@@ -1,7 +1,7 @@
-﻿import "../../styles/nav.scss";
-import search from "../icons/search";
-import Categories from "./Categories";
-import ToDo from "./ToDo";
+﻿import "../../../styles/nav.scss";
+import search from "../../../components/icons/search";
+import Categories from "./Categories/Categories";
+import NewToDo from "./NewToDo";
 
 /**
  * Creates a navigation header element for the to-do application.
@@ -31,7 +31,7 @@ export default class Nav {
         const categoriesButton = new Categories().getButton()[0];
         this.headerElement.querySelector('h1')?.after(categoriesButton);
 
-        const addButton = new ToDo().getButton()[0];
+        const addButton = new NewToDo().getButton()[0];
         this.headerElement.querySelector('nav')?.appendChild(addButton);
     }
     

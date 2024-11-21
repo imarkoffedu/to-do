@@ -13,9 +13,9 @@ Build with Webpack.
 
 - `src` - source code.
   - `components` - reusable components.
-    - `layout` - layout components.
     - `icons` - icon components.
     - `ui` - UI components.
+  - `pages` - pages. May have their own hierarchy of different components. 
   - `services` - services for working with the backend.
   - `styles` - styles.
     - `components` - styles for components.

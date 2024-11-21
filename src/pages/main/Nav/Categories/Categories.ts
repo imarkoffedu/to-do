@@ -1,6 +1,6 @@
 ﻿import $ from 'jquery';
-import Sheet from "../ui/Sheet";
-import ButtonClose from "../ui/ButtonClose";
+import Sheet from "../../../../components/ui/Sheet";
+import ButtonClose from "../../../../components/ui/ButtonClose";
 
 /**
  * Class representing a Categories component.

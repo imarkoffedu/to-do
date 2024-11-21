@@ -10,7 +10,7 @@ type Todo = {
     description?: string; // Опис
     doneAt?: Date; // Статус виконання. Непусте значення означає про те, що завдання виконане в заданий час.
     priorityId?: number; // Посилання на пріоритет
-    categoryId?: number; // Посилання на категорію
+    categoryId?: number[]; // Посилання на категорію
     created_at: Date; // коли створилося
     updated_at?: Date; // коли оновилося
 };
@@ -24,7 +24,7 @@ type TodoResponse = {
     description?: string;
     doneAt?: Date;
     priority?: Priority; // повертати не id, а відразу об'єкт
-    category?: Category; // так само як і з приорітетом
+    category?: Category[]; // так само як і з приорітетом
     created_at: Date;
     updated_at?: Date;
 };

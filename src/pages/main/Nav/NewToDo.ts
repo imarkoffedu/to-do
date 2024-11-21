@@ -1,18 +1,18 @@
-﻿import Modal from "../ui/Modal";
-import plus from "../icons/plus";
+﻿import Modal from "../../../components/ui/Modal";
+import plus from "../../../components/icons/plus";
 import $ from 'jquery';
 
 /**
  * Class representing a To-Do modal.
  */
-export default class ToDo {
+export default class NewToDo {
     open: () => void = () => {};
 
     close: () => void = () => {};
 
     constructor() {
-        const modalTitle = $('<h2>New ToDo</h2>');
-        const modalContent = $('<p>ToDo content</p>');
+        const modalTitle = $('<h2>New NewToDo</h2>');
+        const modalContent = $('<p>NewToDo content</p>');
         const addTaskButton = $('<button class="primary">Add Task</button>');
 
         const modal = new Modal(modalTitle, modalContent, addTaskButton);

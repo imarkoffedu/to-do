@@ -5,7 +5,7 @@
  * component to the document body.
  */
 
-import Nav from "./components/layout/Nav";
+import Nav from "./pages/main/Nav/Nav";
 import "./styles/styles.scss";
 
 document.body.appendChild(new Nav().render());
